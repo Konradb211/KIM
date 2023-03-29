@@ -15,14 +15,14 @@ html {
 
 body {
 	font-family: "Lato", sans-serif;
-	background-color: #faedcd;
+	background-image: $bgcolor;
 	font-size: 1.6rem;
 }
 
 .navbar {
 	display: flex;
 	padding: 1.5em;
-	background-color: #84a98c;
+	background-color: $navColor;
 
 	&__kim {
 		position: relative;
