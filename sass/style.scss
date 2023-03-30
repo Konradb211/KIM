@@ -34,7 +34,7 @@ body {
 		text-decoration: none;
 		font-size: 3rem;
 		font-weight: bold;
-		color: $white;
+		color: $mainColor;
 	}
 }
 
@@ -174,9 +174,7 @@ body {
 		width: 100%;
 		display: flex;
 		padding: 1.5em;
-		background: none;
-		background-color: rgba(0, 0, 0, 0.6);
-		z-index: 100;
+		z-index: 1;
 
 		&__kim {
 			position: relative;
@@ -184,7 +182,7 @@ body {
 			text-decoration: none;
 			font-size: 2rem;
 			font-weight: bold;
-			color: $white;
+			color: $mainColor;
 		}
 
 		&__links {
