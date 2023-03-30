@@ -24,7 +24,7 @@ body {
 	position: fixed;
 	height: 100px;
 	width: 100%;
-	background-color: rgba(0, 0, 0, 0.85);
+	background-color: rgba(0, 0, 0, 0.6);
 	z-index: 11;
 	&-kim {
 		position: fixed;
@@ -49,7 +49,7 @@ body {
 	width: 100%;
 	transform: translateX(100%);
 	transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
-	background-color: rgba(0, 0, 0, 0.6);
+	background-color: rgba(0, 0, 0, 0.9);
 	z-index: 10;
 
 	&--active {
@@ -72,6 +72,10 @@ body {
 		font-size: 2.5rem;
 		text-transform: uppercase;
 		text-decoration: none;
+
+		&:hover {
+			color: $mainColor;
+		}
 	}
 }
 
@@ -139,7 +143,7 @@ body {
 		color: $white;
 
 		span {
-			color: $titleColor;
+			color: $mainColor;
 		}
 	}
 
@@ -197,6 +201,11 @@ body {
 			text-decoration: none;
 			font-size: 2rem;
 			color: $white;
+			transition: color 0.3s;
+
+			&:hover {
+				color: $mainColor;
+			}
 		}
 	}
 
