@@ -1,5 +1,6 @@
 @use "colors" as *;
 @use "mixins" as *;
+@use "animations" as *;
 
 *,
 *::before,
@@ -153,6 +154,10 @@ body {
 		text-transform: uppercase;
 		color: $white;
 	}
+
+	&__arrow {
+		display: none;
+	}
 }
 
 // MEDIA
@@ -212,6 +217,24 @@ body {
 
 		&__text {
 			letter-spacing: 0.2em;
+		}
+
+		&__arrow {
+			display: block;
+			position: absolute;
+			top: 45em;
+			z-index: 1;
+			scale: 1.5;
+			cursor: pointer;
+			transition: scale 0.3s;
+
+			&:hover {
+				scale: 2;
+			}
+		}
+
+		.heartbeat {
+			animation: heartbeat 2s infinite;
 		}
 	}
 }
