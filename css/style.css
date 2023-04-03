@@ -190,21 +190,22 @@ body {
   display: none;
 }
 
-.about-us {
-  overflow: hidden;
-}
 .about-us__boxes {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 .about-us__boxes-one {
-  background-color: yellow;
   width: 50%;
+  padding: 2em;
+  background-color: yellow;
 }
 .about-us__boxes-two {
-  background-color: royalblue;
   width: 50%;
+  padding: 2em;
+  background-color: royalblue;
 }
 
 @media (min-width: 768px) {
