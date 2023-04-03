@@ -21,6 +21,12 @@ body {
 	font-size: 1.6rem;
 }
 
+.wrapper {
+	margin: 0 auto;
+	max-width: 1200px;
+	width: 100%;
+}
+
 .logo {
 	position: fixed;
 	height: 100px;
@@ -160,6 +166,24 @@ body {
 	}
 }
 
+//MAIN
+
+//O NAS
+
+.about-us {
+	&__box {
+		display: flex;
+		margin-top: 2em;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		&-title {
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+	}
+}
+
 // MEDIA
 
 @media (min-width: 768px) {
@@ -215,8 +239,12 @@ body {
 	.header {
 		background-image: url("../img/coding-high.jpg");
 
+		&__title {
+			font-size: 4rem;
+		}
 		&__text {
 			letter-spacing: 0.2em;
+			font-size: 2rem;
 		}
 
 		&__arrow {
