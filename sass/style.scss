@@ -171,15 +171,21 @@ body {
 //O NAS
 
 .about-us {
-	&__box {
+	overflow: hidden;
+
+	&__boxes {
 		display: flex;
-		margin-top: 2em;
 		justify-content: center;
 		align-items: center;
-		flex-direction: column;
-		&-title {
-			text-transform: uppercase;
-			font-weight: bold;
+
+		&-one {
+			background-color: yellow;
+			width: 50%;
+		}
+
+		&-two {
+			background-color: royalblue;
+			width: 50%;
 		}
 	}
 }
