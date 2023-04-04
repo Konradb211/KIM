@@ -37,6 +37,14 @@
     animation-timing-function: ease-out;
   }
 }
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 *,
 *::before,
 *::after {
@@ -190,22 +198,56 @@ body {
   display: none;
 }
 
+.about-us {
+  height: 100vh;
+}
 .about-us__boxes {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-transform: uppercase;
   font-weight: bold;
+  overflow: hidden;
 }
 .about-us__boxes-one {
+  position: relative;
   width: 50%;
   padding: 2em;
-  background-color: yellow;
+  text-transform: uppercase;
+}
+.about-us__boxes-one--circle {
+  position: absolute;
+  top: 11em;
+  right: 4em;
+  width: 14%;
+  animation: rotate 30s infinite linear;
+}
+.about-us__boxes-one-title {
+  font-size: 4em;
+  letter-spacing: 0.2em;
+  margin: 0.2em;
+  padding-left: 0.5em;
 }
 .about-us__boxes-two {
   width: 50%;
   padding: 2em;
-  background-color: royalblue;
+}
+.about-us__boxes-two-text {
+  position: relative;
+  font-size: 4.2rem;
+  letter-spacing: 1px;
+  padding-left: 2em;
+}
+.about-us__boxes-two-text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 10em;
+  bottom: 0;
+  border-left: 2px solid black;
+}
+.about-us__boxes-two span {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #9d4edd;
 }
 
 @media (min-width: 768px) {
@@ -275,5 +317,58 @@ body {
   }
   .header .heartbeat {
     animation: heartbeat 2s infinite;
+  }
+}
+@media (min-width: 1200px) {
+  .about-us {
+    height: 100vh;
+  }
+  .about-us__boxes {
+    display: flex;
+    font-weight: bold;
+    overflow: hidden;
+  }
+  .about-us__boxes-one {
+    position: relative;
+    width: 50%;
+    padding: 2em;
+    text-transform: uppercase;
+  }
+  .about-us__boxes-one--circle {
+    position: absolute;
+    top: 11em;
+    right: 4em;
+    width: 14%;
+    animation: rotate 30s infinite linear;
+  }
+  .about-us__boxes-one-title {
+    font-size: 4em;
+    letter-spacing: 0.2em;
+    margin: 0.2em;
+    padding-left: 0.5em;
+  }
+  .about-us__boxes-two {
+    width: 50%;
+    padding: 2em;
+  }
+  .about-us__boxes-two-text {
+    position: relative;
+    font-size: 4.2rem;
+    letter-spacing: 1px;
+    padding-left: 2em;
+  }
+  .about-us__boxes-two-text::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 10em;
+    bottom: 0;
+    border-left: 2px solid black;
+  }
+  .about-us__boxes-two span {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #9d4edd;
   }
 }/*# sourceMappingURL=style.css.map */
