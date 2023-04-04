@@ -172,52 +172,46 @@ body {
 
 .about-us {
 	height: 100vh;
-
 	&__boxes {
 		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 		font-weight: bold;
-		overflow: hidden;
 
 		&-one {
-			position: relative;
-			width: 50%;
-			padding: 2em;
+			padding-top: 1em;
 			text-transform: uppercase;
+			align-items: center;
 
 			&--circle {
-				position: absolute;
-				top: 11em;
-				right: 4em;
-				width: 14%;
-				animation: rotate 30s infinite linear;
+				display: none;
 			}
 
 			&-title {
-				font-size: 4em;
+				font-size: 2em;
 				letter-spacing: 0.2em;
-				margin: 0.2em;
-				padding-left: 0.5em;
 			}
 		}
 
 		&-two {
-			width: 50%;
 			padding: 2em;
 
 			&-text {
 				position: relative;
-				font-size: 4.2rem;
-				letter-spacing: 1px;
-				padding-left: 2em;
+				font-size: 2.7rem;
+				letter-spacing: 0.1em;
+				padding-top: 1em;
+				text-shadow: 2px 1px rgba(0, 0, 0, 0.1);
 
 				&::before {
 					content: "";
 					position: absolute;
 					top: 0;
 					left: 0;
-					right: 10em;
+					right: 0;
 					bottom: 0;
-					border-left: 2px solid black;
+					border-top: 2px solid black;
 				}
 			}
 
@@ -311,64 +305,86 @@ body {
 			animation: heartbeat 2s infinite;
 		}
 	}
-}
 
-@media (min-width: 1200px) {
 	.about-us {
-		height: 100vh;
-
 		&__boxes {
 			display: flex;
-			font-weight: bold;
+			flex-direction: row;
 			overflow: hidden;
 
 			&-one {
 				position: relative;
 				width: 50%;
-				padding: 2em;
+				top: 0;
 				text-transform: uppercase;
 
-				&--circle {
-					position: absolute;
-					top: 11em;
-					right: 4em;
-					width: 14%;
-					animation: rotate 30s infinite linear;
-				}
-
 				&-title {
-					font-size: 4em;
-					letter-spacing: 0.2em;
-					margin: 0.2em;
-					padding-left: 0.5em;
+					font-size: 2.5em;
 				}
 			}
 
 			&-two {
 				width: 50%;
-				padding: 2em;
 
 				&-text {
-					position: relative;
-					font-size: 4.2rem;
+					font-size: 3rem;
 					letter-spacing: 1px;
+					padding: 0;
 					padding-left: 2em;
 
 					&::before {
-						content: "";
-						position: absolute;
-						top: 0;
-						left: 0;
 						right: 10em;
-						bottom: 0;
 						border-left: 2px solid black;
+						border-top: none;
 					}
 				}
+			}
+		}
+	}
+}
 
-				span {
-					text-transform: uppercase;
-					font-weight: bold;
-					color: $mainColor;
+@media (min-width: 992px) {
+	.about-us {
+		&__boxes {
+			&-one {
+				top: 0;
+				&-title {
+					font-size: 3em;
+				}
+			}
+
+			&-two {
+				&-text {
+					font-size: 2.5em;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.about-us {
+		&__boxes {
+			&-one {
+				top: 0;
+				&--circle {
+					display: block;
+					position: absolute;
+					top: 9.2em;
+					right: 4.5em;
+					width: 14%;
+					animation: rotate 30s infinite linear;
+				}
+				&-title {
+					font-size: 4em;
+				}
+			}
+			&-two {
+				&-text {
+					font-size: 4.2rem;
+					letter-spacing: 1px;
+					padding: 0;
+					padding-left: 2em;
 				}
 			}
 		}

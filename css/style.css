@@ -203,46 +203,41 @@ body {
 }
 .about-us__boxes {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-weight: bold;
-  overflow: hidden;
 }
 .about-us__boxes-one {
-  position: relative;
-  width: 50%;
-  padding: 2em;
+  padding-top: 1em;
   text-transform: uppercase;
+  align-items: center;
 }
 .about-us__boxes-one--circle {
-  position: absolute;
-  top: 11em;
-  right: 4em;
-  width: 14%;
-  animation: rotate 30s infinite linear;
+  display: none;
 }
 .about-us__boxes-one-title {
-  font-size: 4em;
+  font-size: 2em;
   letter-spacing: 0.2em;
-  margin: 0.2em;
-  padding-left: 0.5em;
 }
 .about-us__boxes-two {
-  width: 50%;
   padding: 2em;
 }
 .about-us__boxes-two-text {
   position: relative;
-  font-size: 4.2rem;
-  letter-spacing: 1px;
-  padding-left: 2em;
+  font-size: 2.7rem;
+  letter-spacing: 0.1em;
+  padding-top: 1em;
+  text-shadow: 2px 1px rgba(0, 0, 0, 0.1);
 }
 .about-us__boxes-two-text::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  right: 10em;
+  right: 0;
   bottom: 0;
-  border-left: 2px solid black;
+  border-top: 2px solid black;
 }
 .about-us__boxes-two span {
   text-transform: uppercase;
@@ -318,57 +313,65 @@ body {
   .header .heartbeat {
     animation: heartbeat 2s infinite;
   }
-}
-@media (min-width: 1200px) {
-  .about-us {
-    height: 100vh;
-  }
   .about-us__boxes {
     display: flex;
-    font-weight: bold;
+    flex-direction: row;
     overflow: hidden;
   }
   .about-us__boxes-one {
     position: relative;
     width: 50%;
-    padding: 2em;
+    top: 0;
     text-transform: uppercase;
   }
+  .about-us__boxes-one-title {
+    font-size: 2.5em;
+  }
+  .about-us__boxes-two {
+    width: 50%;
+  }
+  .about-us__boxes-two-text {
+    font-size: 3rem;
+    letter-spacing: 1px;
+    padding: 0;
+    padding-left: 2em;
+  }
+  .about-us__boxes-two-text::before {
+    right: 10em;
+    border-left: 2px solid black;
+    border-top: none;
+  }
+}
+@media (min-width: 992px) {
+  .about-us__boxes-one {
+    top: 0;
+  }
+  .about-us__boxes-one-title {
+    font-size: 3em;
+  }
+  .about-us__boxes-two-text {
+    font-size: 2.5em;
+  }
+}
+@media (min-width: 1200px) {
+  .about-us__boxes-one {
+    top: 0;
+  }
   .about-us__boxes-one--circle {
+    display: block;
     position: absolute;
-    top: 11em;
-    right: 4em;
+    top: 9.2em;
+    right: 4.5em;
     width: 14%;
     animation: rotate 30s infinite linear;
   }
   .about-us__boxes-one-title {
     font-size: 4em;
-    letter-spacing: 0.2em;
-    margin: 0.2em;
-    padding-left: 0.5em;
-  }
-  .about-us__boxes-two {
-    width: 50%;
-    padding: 2em;
   }
   .about-us__boxes-two-text {
-    position: relative;
     font-size: 4.2rem;
     letter-spacing: 1px;
+    padding: 0;
     padding-left: 2em;
-  }
-  .about-us__boxes-two-text::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 10em;
-    bottom: 0;
-    border-left: 2px solid black;
-  }
-  .about-us__boxes-two span {
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #9d4edd;
   }
 }/*# sourceMappingURL=style.css.map */
