@@ -314,11 +314,14 @@ body {
 //OFFERS
 
 .offers {
+	height: 100vh;
 	&__box {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
+		margin: 1.5rem 2rem;
+		padding: 2em 0;
 		&-one {
 			display: flex;
 			text-align: center;
@@ -335,6 +338,57 @@ body {
 
 			&-text {
 				padding-top: 1em;
+				font-size: 2.2rem;
+				letter-spacing: 0.2rem;
+			}
+		}
+	}
+	&__boxes {
+		position: relative;
+		display: flex;
+		text-align: left;
+		height: 18em;
+		width: 22em;
+		border-radius: 30px;
+		box-shadow: 0 0 15px 2px #999;
+		overflow: hidden;
+
+		&-number {
+			position: absolute;
+			margin-top: 2em;
+			margin-left: 2em;
+			height: 100%;
+			width: 100%;
+			font-size: 2rem;
+			color: $mainColor;
+		}
+
+		&-title {
+			margin-top: 0.5em;
+			color: $offersColor;
+		}
+
+		&-text {
+			width: 95%;
+			margin-top: 0.5em;
+			color: $offersColor;
+		}
+		&-btn-box {
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 87%;
+
+			&-one {
+				margin-top: 1em;
+				padding: 0.7em 1.5em;
+				border: 1px solid $black;
+				background: $black;
+				color: $white;
+				border-radius: 2.5em;
+				text-transform: uppercase;
+				cursor: pointer;
 			}
 		}
 	}
