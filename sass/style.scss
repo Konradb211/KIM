@@ -315,7 +315,6 @@ body {
 //OFFERS
 
 .offers {
-	height: 100vh;
 	&__box {
 		display: flex;
 		justify-content: center;
@@ -381,10 +380,12 @@ body {
 				position: relative;
 				display: flex;
 				justify-content: center;
+				align-items: flex-end;
 				height: 62.5%;
 				width: 87%;
 
 				&-one {
+					margin-top: 1em;
 					padding: 0.7em 1.5em;
 					border: 1px solid $black;
 					background: $bgcolor;
@@ -392,7 +393,57 @@ body {
 					border-radius: 2.5em;
 					text-transform: uppercase;
 					cursor: pointer;
+					transition: all 0.3s;
+
+					&::before,
+					&::after {
+						display: block;
+						position: absolute;
+						content: "";
+						z-index: -1;
+					}
+
+					&::before {
+						top: -30px;
+						left: -130px;
+						height: 160%;
+						width: 100px;
+						background-image: linear-gradient(
+							-90deg,
+							rgba(255, 255, 255, 0.3),
+							rgba(255, 255, 255, 0)
+						);
+						transform: rotate(20deg);
+					}
+
+					&:hover::before {
+						left: 130%;
+					}
 				}
+			}
+		}
+	}
+}
+//INSET
+.inset {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: green;
+	color: $white;
+	&__boxes {
+		&-left {
+			&--title {
+			}
+
+			&--text {
+			}
+
+			&--icons {
+			}
+		}
+		&-right {
+			&--img {
 			}
 		}
 	}
@@ -609,11 +660,11 @@ body {
 
 	.offers {
 		&__box {
+			position: sticky;
 			flex-direction: row;
 			align-items: start;
 
 			&-one {
-				position: relative;
 				flex-direction: column;
 				width: 50%;
 
@@ -640,6 +691,7 @@ body {
 		}
 
 		&__boxy {
+			position: static;
 			width: 75%;
 			display: flex;
 			justify-content: center;
