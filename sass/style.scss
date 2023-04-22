@@ -426,17 +426,20 @@ body {
 }
 //INSET
 .inset {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: green;
+	background-image: $bgcolor;
 	color: $white;
 	&__boxes {
+		width: 100%;
 		&-left {
 			&--title {
+				margin: 1em 0 0.5em 0.5em;
+				font-size: 3.5rem;
+				font-weight: bold;
 			}
 
 			&--text {
+				margin-left: 0.8em;
+				font-size: 2rem;
 			}
 
 			&--icons {
@@ -771,6 +774,23 @@ body {
 			&-two {
 				&-text {
 					font-size: 2.5em;
+				}
+			}
+		}
+	}
+
+	// INSET
+
+	.inset {
+		&__boxes {
+			display: flex;
+			&-left {
+			}
+
+			&-right {
+				display: flex;
+
+				&--img {
 				}
 			}
 		}
